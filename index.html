@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive PWA Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <main class="player-container">
+        <header class="track-info">
+            <h1 id="track-title">Aucun morceau chargé</h1>
+            <p id="current-playlist-display">Playlist : Aucune</p>
+        </header>
+
+        <section class="controls">
+            <button id="btn-prev" class="btn-circle" aria-label="Précédent">⏮</button>
+            <button id="btn-play-pause" class="btn-circle btn-large" aria-label="Lecture">▶</button>
+            <button id="btn-next" class="btn-circle" aria-label="Suivant">⏭</button>
+        </section>
+
+        <section class="playlist-selector">
+            <button class="btn-tab active" data-playlist="Chill">Chill</button>
+            <button class="btn-tab" data-playlist="Énergie">Énergie</button>
+            <button class="btn-tab" data-playlist="Focus">Focus</button>
+        </section>
+
+        <section class="track-list-container">
+            <ul id="track-list"></ul>
+        </section>
+
+        <footer class="import-zone">
+            <label for="file-upload" class="btn-import">Importer des MP3</label>
+            <input type="file" id="file-upload" accept="audio/mp3" multiple hidden>
+            <select id="import-playlist-target">
+                <option value="Chill">Vers : Chill</option>
+                <option value="Énergie">Vers : Énergie</option>
+                <option value="Focus">Vers : Focus</option>
+            </select>
+        </footer>
+    </main>
+
+    <audio id="audio-element"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
