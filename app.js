@@ -179,6 +179,9 @@ function updateMediaSessionMetadata(title) {
 
 // --- EVENEMENTS & ACTIONS ---
 function setupEventListeners() {
+   document.getElementById('btn-trigger-upload').addEventListener('click', () => {
+        document.getElementById('file-upload').click();
+    }); 
     // Importation de fichiers
     document.getElementById('file-upload').addEventListener('change', async (e) => {
         const files = e.target.files;
