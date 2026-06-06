@@ -32,8 +32,10 @@
         </section>
 
         <footer class="import-zone">
-            <label for="file-upload" class="btn-import">Importer des MP3</label>
-            <input type="file" id="file-upload" accept="audio/mpeg, audio/mp3, .mp3" multiple hidden>
+            <button type="button" id="btn-trigger-upload" class="btn-import">Importer des MP3</button>
+    
+            <input type="file" id="file-upload" accept="audio/*" multiple style="display: none;">
+    
             <select id="import-playlist-target">
                 <option value="Chill">Vers : Chill</option>
                 <option value="Énergie">Vers : Énergie</option>
